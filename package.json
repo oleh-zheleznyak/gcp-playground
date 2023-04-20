@@ -1,0 +1,25 @@
+{
+  "name": "test-cloud-function-transform",
+  "version": "1.0.0",
+  "description": "GCP cloud function that processes files in cloud storage",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "test",
+    "build": "tsc && eslint",
+    "gcp-build": "npm run build",
+    "start": "npx functions-framework --target=pubSubEventHandler",
+    "zip": " zip -r function-source.zip . -x \"node_modules/*\" -x \".idea/*\" -x \"infrastructure/*\""
+  },
+  "author": "Oleh Zheleznyak",
+  "license": "ISC",
+  "devDependencies": {
+    "@tsconfig/node16": "^1.0.3",
+    "@typescript-eslint/eslint-plugin": "^5.58.0",
+    "@typescript-eslint/parser": "^5.58.0",
+    "eslint": "^8.38.0",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "@google-cloud/functions-framework": "^3.2.0"
+  }
+}

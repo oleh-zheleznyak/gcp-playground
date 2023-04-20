@@ -1,0 +1,1 @@
+exports.pubSubEventHandler = require('./dist/pubSubEventHandler');
